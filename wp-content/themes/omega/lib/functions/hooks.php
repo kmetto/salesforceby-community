@@ -134,7 +134,7 @@ function omega_default_footer_insert( $settings ) {
 	if ( !is_child_theme() ) {
 		return '<p class="copyright">' . __( 'Copyright &#169; ', 'omega' ) . date_i18n( 'Y' ) . ' ' . get_bloginfo( 'name' ) . '.</p>' . "\n\n" . '<p class="credit">' . omega_get_theme_name() . __( ' WordPress Theme by ', 'omega' ) . omega_get_author_uri() . '</p>';		
 	} else {
-		return '<p class="copyright">' . __( 'Copyright &#169; ', 'omega' ) . date_i18n( 'Y' ) . ' ' . get_bloginfo( 'name' ) . '.</p>' . "\n\n" . '<p class="credit">' . omega_get_child_theme_link() . __( ' WordPress Theme by ', 'omega' ) . omega_get_author_uri() . '</p>';		
+		return '<p class="copyright">© 1998-2018 Salesforce.by. All Rights Reserved</p>';
 	}
 	
 
