@@ -132,7 +132,7 @@ function omega_default_footer_insert( $settings ) {
 
 	/* If there is a child theme active, use [child-link] shortcode to the $footer_insert. */
 	if ( !is_child_theme() ) {
-		return '<p class="copyright">' . __( 'Copyright &#169; ', 'omega' ) . date_i18n( 'Y' ) . ' ' . get_bloginfo( 'name' ) . '.</p>' . "\n\n" . '<p class="credit">' . omega_get_theme_name() . __( ' WordPress Theme by ', 'omega' ) . omega_get_author_uri() . '</p>';		
+		return '<p class="copyright">' . __( 'Copyright &#169; ', 'omega' ) . date_i18n( 'Y' ) . ' ' . get_bloginfo( 'name' ) . '.</p>' . "\n\n";		
 	} else {
 		return '<p class="copyright">© 1998-2018 Salesforce.by. All Rights Reserved</p>';
 	}
