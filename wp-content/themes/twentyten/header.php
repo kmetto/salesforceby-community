@@ -96,8 +96,8 @@
 						}
 					?>
 					<?php endif; ?>
-            <a class="button button-signup" href="#">Регистрация</a>
-            <a class="button button-signin" href="#">Войти</a>
+            <a class="button button-signup" href="http://salesforceby-community/registration/">Регистрация</a>
+            <a class="button button-signin" href="http://salesforceby-community/login/">Войти</a>
 			</div><!-- #branding -->
 
 			<div id="access" role="navigation">
