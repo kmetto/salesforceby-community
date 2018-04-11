@@ -65,9 +65,8 @@
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</span>
 				</<?php echo $heading_tag; ?>>
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-
-				<?php
+<!--				<div id="site-description">--><?php //bloginfo( 'description' ); ?><!--</div>-->
+	            <?php
 					// Compatibility with versions of WordPress prior to 3.4.
 					if ( function_exists( 'get_custom_header' ) ) {
 						/*
@@ -97,6 +96,8 @@
 						}
 					?>
 					<?php endif; ?>
+            <a class="button button-signup" href="#">Регистрация</a>
+            <a class="button button-signin" href="#">Войти</a>
 			</div><!-- #branding -->
 
 			<div id="access" role="navigation">
