@@ -44,8 +44,17 @@
  * Used to set the width of images and content. Should be equal to the width the theme
  * is designed for, generally via the style.css stylesheet.
  */
+
+require_once get_template_directory().DIRECTORY_SEPARATOR.'core/scripts.php';
+
+
+
+
+
+
 if ( ! isset( $content_width ) )
 	$content_width = 640;
+
 
 /* Tell WordPress to run twentyten_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'twentyten_setup' );
