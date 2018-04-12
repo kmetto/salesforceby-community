@@ -96,9 +96,19 @@
 						}
 					?>
 					<?php endif; ?>
-            <a class="button button-signup" href="http://salesforceby-community/registration/">Регистрация</a>
-            <a class="button button-signin" href="http://salesforceby-community/loginpage/">Войти</a>
-			</div><!-- #branding -->
+<!--                <div>-->
+<!--                    <a class="button button-signup" href="http://salesforceby-community/registration/">Регистрация</a>-->
+<!--                    <a class="button button-signin" href="http://salesforceby-community/loginpage/">Войти</a>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <a class="button button-signin" href="http://salesforceby-community/loginpage/">Выйти</a>-->
+<!--                    <a class="button button-signup" href="http://salesforceby-community/registration/">Профиль</a>-->
+<!--                </div>-->
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Name of Widgetized Area") ) : ?>
+            <?php endif;?>
+
+
+        </div><!-- #branding -->
 
 			<div id="access" role="navigation">
 			  <?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>

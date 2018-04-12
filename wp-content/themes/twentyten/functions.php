@@ -483,6 +483,17 @@ function twentyten_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+
+    if ( function_exists('register_sidebar') )
+        register_sidebar(array(
+                'name' => 'Name of Widgetized Area',
+                'before_widget' => '<div class = "widgetizedArea">',
+                'after_widget' => '</div>',
+                'before_title' => '<h3>',
+                'after_title' => '</h3>',
+            )
+     );
+
 }
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'twentyten_widgets_init' );

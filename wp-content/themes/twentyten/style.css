@@ -407,7 +407,7 @@ a:hover {
 .button-signup:hover,
  .button-signup:focus,
  .button-signup:active {
-     background: #446787;
+     background: #446787;git
  }
 
 .button-signin:hover,
@@ -415,6 +415,16 @@ a:hover {
 .button-signin:active {
     border: 1px solid #446787;
 }
+
+.widgetizedArea {
+    float: right;
+    display: inline-block;
+}
+
+.widgetizedArea * {
+    display: inline-block;
+}
+
 
 /* =Menu
 -------------------------------------------------------------- */
