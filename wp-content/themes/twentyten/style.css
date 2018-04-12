@@ -14,6 +14,10 @@ Text Domain: twentyten
 
 /* =Reset default browser CSS. Based on work by Eric Meyer.
 -------------------------------------------------------------- */
+@font-face {
+    font-family: SalesforceSans; /* Имя шрифта */
+    src: url(fonts/SalesforceSans-Regular.ttf);
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,6 +28,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
+    font-family: SalesforceSans;
 	background: transparent;
 	border: 0;
 	margin: 0;
