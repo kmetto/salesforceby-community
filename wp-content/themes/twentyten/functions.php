@@ -45,12 +45,7 @@
  * is designed for, generally via the style.css stylesheet.
  */
 
-require_once get_template_directory().DIRECTORY_SEPARATOR.'core/scripts.php';
-
-
-
-
-
+require_once get_template_directory().DIRECTORY_SEPARATOR.'src/core/scripts.php';
 
 if ( ! isset( $content_width ) )
 	$content_width = 640;
