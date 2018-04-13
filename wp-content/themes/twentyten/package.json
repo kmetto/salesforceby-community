@@ -1,0 +1,14 @@
+{
+  "name": "salesforceby-community",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack  --config build/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
