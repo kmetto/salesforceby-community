@@ -15,8 +15,13 @@ Text Domain: twentyten
 /* =Reset default browser CSS. Based on work by Eric Meyer.
 -------------------------------------------------------------- */
 @font-face {
-    font-family: SalesforceSans; /* Имя шрифта */
-    src: url(src/frontend/fonts/SalesforceSans-Regular.ttf);
+    font-family: Roboto-Regular; /* Имя шрифта */
+    src: url(src/frontend/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: Roboto-Light; /* Имя шрифта */
+	src: url(src/frontend/fonts/Roboto-Light.ttf);
 }
 
 html, body, div, span, applet, object, iframe,
@@ -28,7 +33,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-    font-family: SalesforceSans;
+    font-family: Roboto-Regular;
 	background: transparent;
 	border: 0;
 	margin: 0;
@@ -62,6 +67,10 @@ table {
 }
 a img {
 	border: none;
+}
+
+.entry-meta span,.entry-meta a, .entry-utility span, .entry-utility a {
+	font-family: Roboto-Light;
 }
 
 /* =Layout
