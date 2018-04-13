@@ -16,7 +16,7 @@ Text Domain: twentyten
 -------------------------------------------------------------- */
 @font-face {
     font-family: SalesforceSans; /* Имя шрифта */
-    src: url(fonts/SalesforceSans-Regular.ttf);
+    src: url(src/frontend/fonts/SalesforceSans-Regular.ttf);
 }
 
 html, body, div, span, applet, object, iframe,
@@ -474,7 +474,7 @@ a:hover {
 
 #search-button-hidden {
     cursor: pointer;
-    background-image: url(images/search-icon.png);
+    background-image: url(src/frontend/images/search-icon.png);
     height: 25px;
     width: 25px;
     background-size: cover;
@@ -1434,7 +1434,7 @@ h3#reply-title {
 	position: relative;
 }
 #site-generator a {
-	background: url(images/wordpress.png) center left no-repeat;
+	background: url(src/frontend/images/wordpress.png) center left no-repeat;
 	color: #666;
 	display: inline-block;
 	line-height: 16px;
