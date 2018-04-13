@@ -1,4 +1,5 @@
 const path = require('path');
+
 // import HtmlWebpackPlugin from 'html-webpack-plugin';
 // import CleanWebpackPlugin from 'clean-webpack-plugin';
 // import NodemonPlugin from 'nodemon-webpack-plugin';
@@ -24,12 +25,12 @@ module.exports =  {
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                // use: {
-                //     loader: 'babel-loader',
-                //     options: {
-                //         presets: ['@babel/preset-env'],
-                //     },
-                // },
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env'],
+                    },
+                },
             },
             // {
             //     test: /\.scss$/,
