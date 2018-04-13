@@ -1,9 +1,10 @@
 import path from 'path';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 module.exports =  {
     entry: {
-        main: path.resolve(__dirname, '../src/frontend/js/search-hidden.js'),
+        main: path.resolve(__dirname, 'src/frontend/js/search-hidden.js'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -23,6 +24,13 @@ module.exports =  {
                 },
             },
             {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader'],
+                }),
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 use: {
                     loader: 'file-loader',
@@ -32,7 +40,7 @@ module.exports =  {
                 },
             },
             {
-                test: /\.woff2?$/,
+                test: /\.ttf$/,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -45,5 +53,6 @@ module.exports =  {
     },
     plugins: [
         new CleanWebpackPlugin('dist'),
+        new ExtractTextPlugin('css/styles.css'),
     ],
 };
