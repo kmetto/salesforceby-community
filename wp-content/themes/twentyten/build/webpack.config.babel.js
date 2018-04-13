@@ -1,22 +1,12 @@
-const path = require('path');
-
-// import HtmlWebpackPlugin from 'html-webpack-plugin';
-// import CleanWebpackPlugin from 'clean-webpack-plugin';
-// import NodemonPlugin from 'nodemon-webpack-plugin';
-// import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import path from 'path';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 module.exports =  {
     entry: {
         main: path.resolve(__dirname, '../src/frontend/js/search-hidden.js'),
     },
-    // resolve: {
-    //     alias: {
-    //         '@root': path.resolve(__dirname, '.'),
-    //         '@frontend': path.resolve(__dirname, 'src/frontend'),
-    //     },
-    // },
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].bundle.js',
         publicPath: 'dist',
     },
@@ -32,13 +22,6 @@ module.exports =  {
                     },
                 },
             },
-            // {
-            //     test: /\.scss$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: 'style-loader',
-            //         use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
-            //     }),
-            // },
             {
                 test: /\.(png|jpg|gif)$/,
                 use: {
@@ -49,7 +32,7 @@ module.exports =  {
                 },
             },
             {
-                test: /\.ttf$/,
+                test: /\.woff2?$/,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -60,35 +43,7 @@ module.exports =  {
             },
         ],
     },
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         filename: 'login.html',
-    //         template: 'src/backend/views/login.html',
-    //     }),
-    //     new HtmlWebpackPlugin({
-    //         filename: 'registration.html',
-    //         template: 'src/backend/views/reg.html',
-    //     }),
-    //     new HtmlWebpackPlugin({
-    //         filename: 'index.html',
-    //         template: 'src/backend/views/index.html',
-    //     }),
-    //     new HtmlWebpackPlugin({
-    //         filename: 'profile.hbs',
-    //         template: 'src/backend/views/profile.hbs',
-    //     }),
-    //     new CleanWebpackPlugin('../dist'),
-    //     new NodemonPlugin({
-    //         watch: [
-    //             path.resolve('./src'),
-    //             path.resolve('./app.js'),
-    //         ],
-    //         script: './app.js',
-    //         execMap: {
-    //             js: 'babel-node',
-    //         },
-    //         legacyWatch: true,
-    //     }),
-    //     new ExtractTextPlugin('styles/styles.css'),
-    // ],
+    plugins: [
+        new CleanWebpackPlugin('dist'),
+    ],
 };
