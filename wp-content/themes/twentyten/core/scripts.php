@@ -8,4 +8,6 @@
 
 wp_enqueue_script('main', get_template_directory_uri().'/dist/js/main.bundle.js', '', '', 'true');
 
-wp_enqueue_style( 'styles', get_template_directory_uri().'/dist/css/styles.css', '', '', 'false' );
+
+wp_register_style( 'mystyles', get_template_directory_uri().'/dist/css/custom-styles.css');
+wp_enqueue_style( 'mystyles' );
