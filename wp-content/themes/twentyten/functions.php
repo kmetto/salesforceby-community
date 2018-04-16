@@ -47,6 +47,7 @@
 
 require_once get_template_directory().'/core/scripts.php';
 
+
 if ( ! isset( $content_width ) )
 	$content_width = 640;
 
