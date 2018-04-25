@@ -240,7 +240,7 @@ if ( ! class_exists( 'um\core\Enqueue' ) ) {
 		 */
 		function load_css() {
 
-			wp_register_style('um_styles', um_url . 'assets/css/um-styles.css' );
+			wp_register_style('um_styles', um_url . 'assets/css/um-custom-styles.css' );
 			wp_enqueue_style('um_styles');
 
 			wp_register_style('um_members', um_url . 'assets/css/um-members.css' );

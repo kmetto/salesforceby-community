@@ -404,14 +404,15 @@ a:hover {
 }
 
 .searchform input[type='text'] {
-    border: 1px solid #c5c5c5;
-    border-radius: 6px;
-    margin: -3px 18px 0 18px;
-    padding: 6px;
-    box-shadow: none;
-    background-color: transparent;
-    outline: none;
-    width: 20rem;
+	font-size: 18px;
+	border: 0;
+	border-bottom: 1px solid #c4c4c4;
+	margin: -3px 18px 0 18px;
+	padding: 3px;
+	box-shadow: none;
+	background-color: transparent;
+	outline: none;
+	width: 20rem;
 }
 
 .searchform input[type='submit'] {
@@ -858,8 +859,8 @@ img.size-large,
 img.size-medium,
 .attachment img,
 .widget-container img {
-	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
-	height: auto; /* Override height to match resized width for correct aspect ratio. */
+	width: 100%;
+	max-height: 300px;
 }
 .alignleft,
 img.alignleft {
