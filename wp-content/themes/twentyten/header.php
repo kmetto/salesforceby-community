@@ -101,7 +101,14 @@
             <?php endif;?>
 
             <div id="search-button-hidden"></div>
-
+						<div class="user-actions">
+							<?php if(is_user_logged_in()):?>
+								<a href="/logout" class="button">Выйти</a>
+							<?php else:?>
+								<a href="/login" class="button">Войти</a>
+								<a href="/register" class="button">Регистрация</a>
+							<?php endif;?>
+						</div>
 
         </div><!-- #branding -->
 
