@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic);/* =Fonts
+-------------------------------------------------------------- */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.entry-meta span,.entry-meta a, .entry-utility span, .entry-utility a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
