@@ -97,7 +97,7 @@
 					?>
 					<?php endif; ?>
 
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Name of Widgetized Area") ) : ?>
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header menu widget") ) : ?>
             <?php endif;?>
 
             <div id="search-button-hidden"></div>
