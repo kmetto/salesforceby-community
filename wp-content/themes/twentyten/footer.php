@@ -24,9 +24,7 @@
 ?>
 
 			<div id="site-info">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php bloginfo( 'name' ); ?>
-				</a>
+                <p>© 1998-2018 SalesforceBY. All Rights Reserved.</p>
 			</div><!-- #site-info -->
 
 			<div id="site-generator">
@@ -37,7 +35,7 @@
 				 * @since Twenty Ten 1.0
 				 */
 				do_action( 'twentyten_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyten' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyten' ); ?>"><?php printf( __( 'Proudly powered by %s.', 'twentyten' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyten' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyten' ); ?>"></a>
 			</div><!-- #site-generator -->
 
 		</div><!-- #colophon -->
