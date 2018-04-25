@@ -1,7 +1,6 @@
 import path from 'path';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-
 module.exports =  {
     entry: {
         main: path.resolve(__dirname, 'src/frontend/js/search-hidden.js'),
@@ -35,17 +34,7 @@ module.exports =  {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'images',
-                    },
-                },
-            },
-            {
-                test: /\.ttf$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        outputPath: 'fonts',
-                        publicPath: 'dist/fonts/',
+                        outputPath: 'images/',
                     },
                 },
             },
@@ -53,6 +42,6 @@ module.exports =  {
     },
     plugins: [
         new CleanWebpackPlugin('dist'),
-        new ExtractTextPlugin('css/styles.css'),
+        new ExtractTextPlugin('css/custom-styles.css'),
     ],
 };

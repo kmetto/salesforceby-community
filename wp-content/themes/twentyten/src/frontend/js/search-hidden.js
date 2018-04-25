@@ -1,4 +1,4 @@
-import '../css/styles.css';
+import '../css/custom-styles.css';
 
 window.addEventListener("load", () => {
     const button = document.getElementById('search-button-hidden');
