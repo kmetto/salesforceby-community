@@ -1,5 +1,3 @@
-import '../css/custom-styles.css';
-
 window.addEventListener("load", () => {
     const button = document.getElementById('search-button-hidden');
     const search = document.getElementById('searchform');

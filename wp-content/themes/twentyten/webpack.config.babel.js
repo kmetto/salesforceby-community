@@ -3,11 +3,12 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 module.exports =  {
     entry: {
-        main: path.resolve(__dirname, 'src/frontend/js/search-hidden.js'),
+        'main.js': path.resolve(__dirname, 'src/frontend/js/search-hidden.js'),
+        'styles.css': path.resolve(__dirname, 'src/frontend/styles/index.scss'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].bundle.js',
+        filename: '[name]',
         publicPath: 'dist',
     },
     module: {
@@ -23,10 +24,10 @@ module.exports =  {
                 },
             },
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader'],
+                    use: ['css-loader', 'sass-loader'],
                 }),
             },
             {

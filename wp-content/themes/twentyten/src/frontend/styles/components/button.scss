@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  padding: 5px 20px;
+  border: 1px solid #305C9B;
+  border-radius: 3px;
+  color: #305C9B;
+  text-decoration: none;
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:visited,
+  &:link {
+    color: inherit;
+  }
+  &_brand {
+    background-color: #305C9B;
+    color: #fff!important;
+  }
+}

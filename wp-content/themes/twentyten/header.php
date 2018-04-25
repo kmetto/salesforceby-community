@@ -58,7 +58,7 @@
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<div id="masthead">
-			<div id="branding" role="banner">
+			<nav id="branding" class="nav" role="banner">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 					<span>
@@ -99,25 +99,26 @@
 
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header menu widget") ) : ?>
             <?php endif;?>
-
-            <div id="search-button-hidden"></div>
-						<div class="user-actions">
-							<?php if(is_user_logged_in()):?>
-								<a href="/logout" class="button">Выйти</a>
-							<?php else:?>
-								<a href="/login" class="button">Войти</a>
-								<a href="/register" class="button">Регистрация</a>
-							<?php endif;?>
+						<div class="nav__actions">
+							<div id="search-button-hidden"></div>
+							<div class="nav__user-actions">
+								<?php if(is_user_logged_in()):?>
+									<a href="/logout" class="button">Выйти</a>
+								<?php else:?>
+									<a href="/login" class="button">Войти</a>
+									<a href="/register" class="button button_brand">Регистрация</a>
+								<?php endif;?>
+							</div>
 						</div>
 
-        </div><!-- #branding -->
+        </nav><!-- #branding -->
 
-			<div id="access" role="navigation">
+			<!-- <div id="access" role="navigation">
 			  <?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
+				<div class="skip-link screen-reader-text"><a href="#content" title="<?php //esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php //_e( 'Skip to content', 'twentyten' ); ?></a></div>
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-			</div><!-- #access -->
+				<?php //wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+			</div>#access -->
 		</div><!-- #masthead -->
 	</div><!-- #header -->
 

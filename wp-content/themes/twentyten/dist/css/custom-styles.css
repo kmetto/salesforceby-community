@@ -8,4 +8,28 @@
 .entry-meta span,.entry-meta a, .entry-utility span, .entry-utility a {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-}
+}.button {
+  display: inline-flex;
+  padding: 5px 20px;
+  border: 1px solid #305C9B;
+  border-radius: 3px;
+  color: #305C9B;
+  text-decoration: none; }
+  .button + .button {
+    margin-left: 10px; }
+  .button:hover, .button:visited, .button:link {
+    color: inherit; }
+  .button_brand {
+    background-color: #305C9B;
+    color: #fff !important; }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0; }
+  .nav__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
