@@ -62,3 +62,13 @@
 .um-col-alt .um-right.um-half a:hover {
     background-color: white;
 }
+
+.user-account img{
+    display: inline-block;
+    border: 1px solid #efefef;
+    border-radius: 1rem;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+
+}

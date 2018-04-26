@@ -59,6 +59,16 @@
 
 .um-col-alt .um-right.um-half a:hover {
     background-color: white;
+}
+
+.user-account img{
+    display: inline-block;
+    border: 1px solid #efefef;
+    border-radius: 1rem;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+
 }.button, .um-button {
   display: inline-flex;
   padding: 5px 20px;
@@ -80,6 +90,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 0; }
+  .nav__user-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .nav__user-actions * {
+      margin-right: 1rem; }
   .nav__actions {
     display: flex;
     flex-direction: row;
