@@ -100,7 +100,8 @@
 .post__author {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 10px; }
   .post__author_name, .post__author_date {
     margin-left: 10px; }
 
@@ -112,6 +113,8 @@
   color: #305C9B; }
   .link:hover {
     color: #3B97E1; }
+  .link_no-underline {
+    text-decoration: none; }
 
 .widget_recent_entries .post-date {
   display: block;
