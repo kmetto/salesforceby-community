@@ -43,6 +43,6 @@ module.exports =  {
     },
     plugins: [
         new CleanWebpackPlugin('dist'),
-        new ExtractTextPlugin('css/custom-styles.css'),
+        new ExtractTextPlugin('styles.css'),
     ],
 };

@@ -323,60 +323,7 @@ a:hover {
 #branding {
 	overflow: hidden;
 }
-.menu-item-74,
-.menu-item-75,
-.menu-item-76,
-.menu-item-72,
-.menu-item-73 {
-    float: right;
-    padding: 0.5rem;
-    border-radius: 4px;
-    letter-spacing: 0.0625em;
-    margin-right: 10px;
-    text-decoration: none;
-    outline: none;
-    font-weight: 500;
-    font-family: "-apple-system",BlinkMacSystemFont,Arial,sans-serif;
-    background-color: #215ca0;
-}
 
-.menu-item-74 a,
-.menu-item-75 a,
-.menu-item-76 a,
-.menu-item-72 a,
-.menu-item-73 a {
-    color: white;
-    text-decoration: none;
-}
-
-.button-signup:link, .button-signup:visited {
-    color: #fff;
-}
-
-.button-signin:link, .button-signin:visited {
-    color: #6b97bf;
-}
-
-.button-signup {
-    background-color: #6b97bf;
-}
-
-.button-signin {
-    border: 1px solid #6b97bf;
-    color: #6b97bf;
-}
-/* Add a rollover background colour but keep the text white */
-.button-signup:hover,
- .button-signup:focus,
- .button-signup:active {
-     background: #446787;
- }
-
-.button-signin:hover,
-.button-signin:focus,
-.button-signin:active {
-    border: 1px solid #446787;
-}
 
 .widgetizedArea {
     float: right;
@@ -387,7 +334,7 @@ a:hover {
     display: inline-block;
 }
 
-.searchform {
+.search {
     display: none;
     visibility: hidden;
     transition: visibility 0.5s linear;
@@ -395,12 +342,12 @@ a:hover {
     margin-top: 5px;
 }
 
-.searchform__active {
+.search__active {
     display: block;
     visibility: visible;
 }
 
-.searchform input[type='text'] {
+.search input[type='text'] {
 	font-size: 18px;
 	border: 0;
 	border-bottom: 1px solid #c4c4c4;
@@ -412,7 +359,7 @@ a:hover {
 	width: 20rem;
 }
 
-.searchform input[type='submit'] {
+.search input[type='submit'] {
     display: none;
 }
 
