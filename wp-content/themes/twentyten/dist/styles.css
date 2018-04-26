@@ -109,7 +109,16 @@
   .post__author_name, .post__author_date {
     margin-left: 10px; }
 
+.post__thumb {
+  max-width: 100%;
+  margin-top: 20px; }
+
 .link {
   color: #305C9B; }
   .link:hover {
     color: #3B97E1; }
+
+.widget_recent_entries .post-date {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px; }

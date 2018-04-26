@@ -26,9 +26,9 @@
 					<div class="post__author_name"><a class="link" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a></div>
 					<div class="post__author_name"><?=get_the_date()?></div>
 				</div><!-- .entry-meta -->
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-
+				<div id="post-<?=the_ID();?>" <?=post_class();?>>
+					<h1 class="entry-title"><?=the_title();?></h1>
+					<img class="post__thumb" src="<?=get_the_post_thumbnail_url(null, 'full')?>" alt="<?=the_title();?>">
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
@@ -55,7 +55,7 @@
 <?php endif; ?>
 
 					<div class="entry-utility">
-						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>', null, 'link' ); ?>
 					</div><!-- .entry-utility -->
 				</div><!-- #post-## -->
 

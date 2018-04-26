@@ -84,7 +84,6 @@
 							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
 							$image[1] >= $header_image_width ) :
 						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID );
 					elseif ( get_header_image() ) :
 						// Compatibility with versions of WordPress prior to 3.4.
 						if ( function_exists( 'get_custom_header' ) ) {
