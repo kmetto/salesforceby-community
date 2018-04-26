@@ -23,7 +23,7 @@
 				</div><!-- #nav-above -->
 				<div class="entry-meta post__author">
 					<?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
-					<div class="post__author_name"><?= get_the_author_meta('user_login');?></div>
+					<div class="post__author_name"><a class="link" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a></div>
 					<div class="post__author_name"><?=get_the_date()?></div>
 				</div><!-- .entry-meta -->
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
