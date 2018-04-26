@@ -107,8 +107,7 @@
 							<div class="nav__user-actions">
 								<?php if(is_user_logged_in()):?>
 									<a href="/logout" class="button">Выйти</a>
-									<a href="<?php echo um_user_profile_url(); ?>" class="user-account"><?php echo get_avatar( um_user('ID'), 120 ); ?></a>
-
+									<a href="<?php echo um_user_profile_url(); ?>" class="user-account user__avatar user__avatar_header"><?php echo get_avatar( um_user('ID'), 120 ); ?></a>
 								<?php else:?>
 									<a href="/login" class="button">Войти</a>
 									<a href="/register" class="button button_brand">Регистрация</a>
