@@ -526,6 +526,15 @@ if ( ! function_exists( 'twentyten_posted_on' ) ) :
  *
  * @since Twenty Ten 1.0
  */
+
+  add_filter("the_content", "plugin_myContentFilter");
+
+  function plugin_myContentFilter($content)
+  {
+    // Take the existing content and return a subset of it
+    return substr($content, 0, 300);
+  }
+
 function twentyten_posted_on() {
 	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'twentyten' ),
 		'meta-prep meta-prep-author',
