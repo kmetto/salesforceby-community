@@ -22,7 +22,9 @@
 					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
 				</div><!-- #nav-above -->
 				<div class="entry-meta post__author">
-					<?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
+                    <div class="user__avatar">
+                        <?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
+                    </div>
 					<div class="post__author_name"><a class="link link_no-underline" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a></div>
 					<div class="post__author_name"><?=get_the_date()?></div>
 				</div><!-- .entry-meta -->

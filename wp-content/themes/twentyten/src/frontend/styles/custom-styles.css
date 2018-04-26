@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic');
 
-/* =Fonts
--------------------------------------------------------------- */
+/* =Fonts= -------------------------------------------------------------- */
 * {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -12,17 +11,11 @@
     font-weight: 300;
 }
 
+/* =Forms= -------------------------------------------------------------- */
+
 .entry-content label {
     font-size: 15px;
 }
-
-/*.um-row._um_row_1 {*/
-    /*margin: 0 !important;*/
-/*}*/
-
-/*.um-field-checkbox input[type=checkbox] {*/
-    /*display: none;*/
-/*}*/
 
 .um .um-form .um-col-1 .um-field .um-field-area input[type=text], .um .um-form .um-col-1 .um-field input[type=password]{
     border: 0 !important;
@@ -31,10 +24,6 @@
     outline: none;
     width: 100%;
 }
-
-/*.um-col-alt-b {*/
-    /*font-size: 12px;*/
-/*}*/
 
 .um .um-form .um-col-1 .um-field .um-field-label {
     margin: 0 !important;
@@ -55,17 +44,4 @@
 .um-col-alt .um-right.um-half a, .um-col-alt .um-right.um-half a:hover {
      background-color: transparent;
      border: 1px solid #305C9B !important;
-}
-
-.user-account img{
-    display: inline-block;
-    border: 1px solid #efefef;
-    border-radius: 1rem;
-    width: 2rem;
-    height: 2rem;
-    vertical-align: middle;
-}
-
-.entry-meta.post__author img {
-    border-radius: 1rem;
 }

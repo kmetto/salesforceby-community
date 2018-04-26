@@ -1,7 +1,15 @@
 .user {
-  &__avatar {
-    &_header {
-      margin-left: 10px;
-    }
+  &__avatar img{
+    border-radius: 1rem;
+  }
+  &__avatar_header {
+    margin-left: 10px;
+  }
+  &__avatar_header img{
+    display: inline-block;
+    border: 1px solid #efefef;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
   }
 }
