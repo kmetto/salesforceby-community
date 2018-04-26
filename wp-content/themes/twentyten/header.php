@@ -108,9 +108,7 @@
 							<div class="nav__user-actions">
 								<?php if(is_user_logged_in()):?>
 									<a href="/logout" class="button">Выйти</a>
-									<a href="/user" class="button">
-                                        <img onerror="this.src='http://salesforceby-community/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg';" src="http://gravatar.com/avatar/?s=400&amp;d=mm" class="func-um_user gravatar avatar avatar-190 um-avatar um-avatar-gravatar" width="190" height="190" alt="admin">
-                                    </a>
+
 								<?php else:?>
 									<a href="/login" class="button">Войти</a>
 									<a href="/register" class="button button_brand">Регистрация</a>

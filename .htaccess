@@ -1,5 +1,7 @@
 
 # BEGIN WordPress
+Redirect 301 /training/ https://training-vrpconsulting.cs20.force.com/s/
+Redirect 301 /training https://training-vrpconsulting.cs20.force.com/s/
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
