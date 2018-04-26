@@ -16,17 +16,13 @@
     font-size: 15px;
 }
 
-.um-row._um_row_1 {
-    margin: 0 !important;
-}
+/*.um-row._um_row_1 {*/
+    /*margin: 0 !important;*/
+/*}*/
 
-.um-field-checkbox input[type=checkbox] {
-    display: none;
-}
-
-.um-field.um-field-c {
-    margin-bottom: 1rem;
-}
+/*.um-field-checkbox input[type=checkbox] {*/
+    /*display: none;*/
+/*}*/
 
 .um .um-form .um-col-1 .um-field .um-field-area input[type=text], .um .um-form .um-col-1 .um-field input[type=password]{
     border: 0 !important;
@@ -36,31 +32,29 @@
     width: 100%;
 }
 
-.um-col-alt-b {
-    font-size: 12px;
+/*.um-col-alt-b {*/
+    /*font-size: 12px;*/
+/*}*/
+
+.um .um-form .um-col-1 .um-field .um-field-label {
+    margin: 0 !important;
 }
 
 .um .um-form .um-col-1 .um-field .um-field-label label {
-    font-size: 12px;
-    margin-bottom: 5px;
+    font-size: 12px !important;
+    font-weight: normal;
+    margin-bottom: 5px !important;
 }
 
-.um-col-alt .um-half {
-    display: inline-block;
-    margin-right: 1rem;
-}
 .um-col-alt .um-left.um-half input[type=submit].um-button{
     background-color: #305C9B;
     color: #fff !important;
-    cursor: pointer;
+    border: 0 !important;
 }
 
-.um-col-alt .um-right.um-half a {
-    background-color: white;
-}
-
-.um-col-alt .um-right.um-half a:hover {
-    background-color: white;
+.um-col-alt .um-right.um-half a, .um-col-alt .um-right.um-half a:hover {
+     background-color: transparent;
+     border: 1px solid #305C9B !important;
 }
 
 .user-account img{
@@ -70,5 +64,8 @@
     width: 2rem;
     height: 2rem;
     vertical-align: middle;
+}
 
+.entry-meta.post__author img {
+    border-radius: 1rem;
 }
