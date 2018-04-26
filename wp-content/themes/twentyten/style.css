@@ -279,13 +279,6 @@ textarea {
 a:link {
 	color: #0066cc;
 }
-a:visited {
-	color: #743399;
-}
-a:active,
-a:hover {
-	color: #ff4b33;
-}
 
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -590,10 +583,6 @@ div.menu li {
 	font-size: 12px;
 }
 
-.entry-meta a:link, .entry-meta a:visited, .entry-meta a:hover, .entry-meta a:focus {
-    color: #305C9B;
-}
-
 .entry-meta abbr,
 .entry-utility abbr {
 	border: none;
@@ -716,14 +705,7 @@ body.page .edit-link {
 	font-size: 12px;
 	line-height: 18px;
 }
-.entry-meta a,
-.entry-utility a {
-	color: #777;
-}
-.entry-meta a:hover,
-.entry-utility a:hover {
-	color: #ff4b33;
-}
+
 #content .video-player {
 	padding: 0;
 }

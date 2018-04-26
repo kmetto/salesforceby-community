@@ -91,3 +91,8 @@
   align-items: center; }
   .post__author_name, .post__author_date {
     margin-left: 10px; }
+
+.link {
+  color: #305C9B; }
+  .link:hover {
+    color: #3B97E1; }
