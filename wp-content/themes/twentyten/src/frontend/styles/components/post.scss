@@ -1,0 +1,11 @@
+.post{
+  &__author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &_name,
+    &_date {
+      margin-left: 10px;
+    }
+  }
+}

@@ -24,7 +24,7 @@
 ?>
 
 			<div id="site-info">
-                <p>© 1998-2018 SalesforceBY. All Rights Reserved.</p>
+                <p>© 1998-2018 Salesforce.by. Все права защищены.</p>
 			</div><!-- #site-info -->
 
 			<div id="site-generator">
