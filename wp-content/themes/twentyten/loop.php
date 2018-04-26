@@ -61,7 +61,7 @@
 
 	<?php if ( ( function_exists( 'get_post_format' ) && 'gallery' == get_post_format( $post->ID ) ) || in_category( _x( 'gallery', 'gallery category slug', 'twentyten' ) ) ) : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a class="link" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
 				<?php //twentyten_posted_on(); ?>
@@ -78,7 +78,7 @@
 						$image = reset( $images );
 				?>
 						<div class="gallery-thumb">
-							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?></a>
+							<a class="size-thumbnail link" href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $image, 'thumbnail' ); ?></a>
 						</div><!-- .gallery-thumb -->
 						<p><em><?php printf( _n( 'This gallery contains <a %1$s>%2$s photo</a>.', 'This gallery contains <a %1$s>%2$s photos</a>.', $total_images, 'twentyten' ),
 								'href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark"',
@@ -130,11 +130,11 @@
 	<?php else : ?>
 		<div class="entry-meta post__author">
 			<?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
-			<div class="post__author_name"><?= get_the_author_meta('user_login');?></div>
+			<div class="post__author_name"><a class="link" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a></div>
 			<div class="post__author_name"><?=get_the_date()?></div>
 		</div><!-- .entry-meta -->
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a class="link" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<div class="entry-summary">

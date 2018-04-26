@@ -21,13 +21,13 @@
 					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?></div>
 					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
 				</div><!-- #nav-above -->
-
+				<div class="entry-meta post__author">
+					<?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
+					<div class="post__author_name"><a class="link" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a></div>
+					<div class="post__author_name"><?=get_the_date()?></div>
+				</div><!-- .entry-meta -->
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-
-					<div class="entry-meta">
-						<?php twentyten_posted_on(); ?>
-					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -55,7 +55,6 @@
 <?php endif; ?>
 
 					<div class="entry-utility">
-						<?php twentyten_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
 				</div><!-- #post-## -->
