@@ -85,6 +85,9 @@
   max-width: 100%;
   margin-top: 20px; }
 
+.nav-previous a:hover {
+  color: #305C9B; }
+
 .link {
   color: #305C9B; }
   .link:hover {
@@ -131,3 +134,14 @@
 
 .comment-form .logged-in-as {
   display: none; }
+
+.commentlist .comment-author.vcard img {
+  border-radius: 2rem; }
+
+.commentlist .comment-meta.commentmetadata {
+  margin: 0 0 12px 0; }
+  .commentlist .comment-meta.commentmetadata a:hover {
+    color: #305C9B; }
+
+.commentlist .reply a:hover {
+  color: #305C9B; }

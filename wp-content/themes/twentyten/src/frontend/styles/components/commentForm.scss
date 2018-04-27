@@ -22,3 +22,20 @@
     display: none;
   }
 }
+
+.commentlist {
+  .comment-author.vcard img{
+    border-radius: 2rem;
+  }
+  .comment-meta.commentmetadata {
+    margin: 0 0 12px 0;
+    a:hover {
+      color: #305C9B;
+    }
+  }
+  .reply {
+    a:hover {
+      color: #305C9B;
+    }
+  }
+}
