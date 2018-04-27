@@ -78,6 +78,8 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 10px; }
+  .post__author img {
+    border-radius: 1rem; }
   .post__author_name, .post__author_date {
     margin-left: 10px; }
 
