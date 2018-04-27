@@ -135,8 +135,9 @@
 		</div><!-- .entry-meta -->
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<h2 class="entry-title"><a class="link" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<img class="post__thumb" src="<?=get_the_post_thumbnail_url(null, 'full')?>" alt="<?=the_title();?>">			
-
+            <?php if(has_post_thumbnail()):?>
+			    <img class="post__thumb" src="<?=get_the_post_thumbnail_url(null, 'full')?> ";" alt="<?=the_title();?>">
+            <?php endif;?>
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>

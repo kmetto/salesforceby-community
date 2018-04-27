@@ -109,3 +109,25 @@
   width: 2rem;
   height: 2rem;
   vertical-align: middle; }
+
+.comment-form .comment-form-comment textarea {
+  border: 0 !important;
+  border-bottom: 2px solid #C4C4C4 !important;
+  background-color: transparent;
+  height: 3.4em;
+  box-shadow: none;
+  overflow: auto;
+  outline: none;
+  line-height: 20px;
+  resize: vertical; }
+
+.comment-form .form-submit input[type=submit] {
+  padding: 5px 20px;
+  border: 1px solid #305C9B;
+  background-color: #305C9B;
+  border-radius: 3px;
+  color: white !important;
+  cursor: pointer; }
+
+.comment-form .logged-in-as {
+  display: none; }
