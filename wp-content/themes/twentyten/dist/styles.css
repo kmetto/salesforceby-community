@@ -63,6 +63,22 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 0; }
+  .nav__hide {
+    display: none; }
+  .nav__menu {
+    margin: 0.5rem 26rem 0 0; }
+    .nav__menu a:link, .nav__menu a:visited, .nav__menu a {
+      margin-top: 5px;
+      color: #838a92 !important;
+      text-decoration: none;
+      letter-spacing: -.2px;
+      font-weight: 500;
+      font-size: 17px;
+      margin-right: 10px; }
+    .nav__menu a:hover {
+      color: #305C9B !important; }
+    .nav__menu_current {
+      color: #464646 !important; }
   .nav__user-actions {
     display: flex;
     flex-direction: row;

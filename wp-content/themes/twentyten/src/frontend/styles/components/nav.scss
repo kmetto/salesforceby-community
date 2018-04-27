@@ -5,6 +5,29 @@
   justify-content: space-between;;
   padding: 20px 0;
 
+  &__hide {
+    display: none;
+  }
+
+  &__menu {
+    margin: 0.5rem 26rem 0 0;
+    a:link, a:visited, a {
+      margin-top: 5px;
+      color: #838a92 !important;
+      text-decoration: none;
+      letter-spacing: -.2px;
+      font-weight: 500;
+      font-size: 17px;
+      margin-right: 10px;
+    }
+    a:hover {
+      color: #305C9B !important;
+    }
+    &_current {
+      color: #464646 !important;
+    }
+  }
+
   &__user-actions {
     display: flex;
     flex-direction: row;

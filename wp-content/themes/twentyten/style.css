@@ -344,12 +344,12 @@ a:link {
 	font-size: 18px;
 	border: 0;
 	border-bottom: 1px solid #c4c4c4;
-	margin: -3px 18px 0 18px;
+	margin: -3px 20px 0 5px;
 	padding: 3px;
 	box-shadow: none;
 	background-color: transparent;
 	outline: none;
-	width: 20rem;
+	width: 45rem;
 }
 
 .search input[type='submit'] {

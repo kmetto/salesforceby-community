@@ -98,6 +98,10 @@
 
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header menu widget") ) : ?>
             <?php endif;?>
+                        <div class="nav__menu" id="nav__menu">
+                            <a class="menu__link" href="/">Публикации</a>
+                            <a class="menu__link" href="/conferences">Конференции</a>
+                        </div>
 						<div class="nav__actions">
 							<div id="search-button-hidden"></div>
                             <div class="search" id="search">
