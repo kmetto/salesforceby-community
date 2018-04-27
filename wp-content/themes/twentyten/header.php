@@ -65,7 +65,6 @@
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</span>
 				</<?php echo $heading_tag; ?>>
-<!--				<div id="site-description">--><?php //bloginfo( 'description' ); ?><!--</div>-->
 	            <?php
 					// Compatibility with versions of WordPress prior to 3.4.
 					if ( function_exists( 'get_custom_header' ) ) {
@@ -96,37 +95,36 @@
 					?>
 					<?php endif; ?>
 
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header menu widget") ) : ?>
-            <?php endif;?>
-                        <div class="nav__menu" id="nav__menu">
-                            <a class="menu__link" href="/">Публикации</a>
-                            <a class="menu__link" href="/conferences">Конференции</a>
-                        </div>
-						<div class="nav__actions">
-							<div id="search-button-hidden"></div>
-                            <div class="search" id="search">
-                                <input type="text"/>
-                                <input type="submit"/>
-                            </div>
-							<div class="nav__user-actions">
-								<?php if(is_user_logged_in()):?>
-									<a href="/logout" class="button">Выйти</a>
-									<a href="<?php echo um_user_profile_url(); ?>" class="user__avatar user__avatar_header"><?php echo get_avatar( um_user('ID'), 120 ); ?></a>
-								<?php else:?>
-									<a href="/login" class="button">Войти</a>
-									<a href="/register" class="button button_brand">Регистрация</a>
-								<?php endif;?>
-							</div>
-						</div>
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header menu widget") ) : ?>
+                <?php endif;?>
 
-        </nav><!-- #branding -->
+                <div class="nav__menu" id="nav__menu">
+                    <a class="menu__link" href="/">Публикации</a>
+                    <a class="menu__link" href="/conferences">Конференции</a>
+                </div>
 
-			<!-- <div id="access" role="navigation">
-			  <?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php //esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php //_e( 'Skip to content', 'twentyten' ); ?></a></div>
-				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-				<?php //wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-			</div>#access -->
+                <form role="search" method="get" id="searchform" class="searchform" action="http://salesforceby-community/">
+                    <div>
+                        <label class="screen-reader-text" for="s">Найти:</label>
+                        <input type="text" value="weff" name="s" id="s">
+                        <input type="submit" id="searchsubmit" value="Поиск">
+                    </div>
+                </form>
+
+                <div id="search-button-hidden"></div>
+
+                <div class="nav__user-actions">
+                    <?php if(is_user_logged_in()):?>
+                        <a href="/logout" class="button">Выйти</a>
+                        <a href="<?php echo um_user_profile_url(); ?>" class="user__avatar user__avatar_header"><?php echo get_avatar( um_user('ID'), 120 ); ?></a>
+                    <?php else:?>
+                        <a href="/login" class="button">Войти</a>
+                        <a href="/register" class="button button_brand">Регистрация</a>
+                    <?php endif;?>
+                </div>
+
+            </nav><!-- #branding -->
+
 		</div><!-- #masthead -->
 	</div><!-- #header -->
 
