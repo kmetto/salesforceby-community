@@ -111,7 +111,9 @@
                     </div>
                 </form>
 
-                <div id="search-button-hidden"></div>
+                <div class="search-button-hidden" id="search-button-hidden">
+                    <i class="icon-search"></i>
+                </div>
 
                 <div class="nav__user-actions">
                     <?php if(is_user_logged_in()):?>

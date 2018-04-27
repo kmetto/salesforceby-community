@@ -3,8 +3,6 @@ window.addEventListener("load", () => {
     const search = document.getElementById('searchform');
     const menu = document.getElementById('nav__menu');
 
-    console.log(search);
-
     button.addEventListener('click', (e) => {
         search.classList.toggle('searchform__active');
         search.querySelector('input[type="text"]').focus();

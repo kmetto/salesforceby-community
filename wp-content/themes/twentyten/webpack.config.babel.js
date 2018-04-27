@@ -39,6 +39,16 @@ module.exports =  {
                     },
                 },
             },
+            {
+                test: /\.woff2?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'fonts',
+                        publicPath: 'fonts/',
+                    },
+                },
+            },
         ],
     },
     plugins: [

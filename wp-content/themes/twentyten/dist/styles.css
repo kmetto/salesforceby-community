@@ -163,3 +163,52 @@
 
 .commentlist .reply a:hover {
   color: #305C9B; }
+
+@font-face {
+  font-family: 'fontello';
+  src: url(fonts/6a36d105528570039209413742b6f710.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+.searchform {
+  display: none; }
+  .searchform input[type='submit'] {
+    display: none; }
+  .searchform input[type='text'] {
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid #c4c4c4;
+    box-shadow: none;
+    background-color: transparent;
+    outline: none;
+    width: 44.9rem; }
+
+.searchform__active {
+  display: block; }
+
+.search-button-hidden {
+  font-size: 1.4rem; }
+  .search-button-hidden .icon-search:before {
+    content: '\E800';
+    cursor: pointer;
+    transition: color 0.3s linear; }
+  .search-button-hidden [class^="icon-"]:before, .search-button-hidden [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.search-button-hidden:hover .icon-search:before {
+  content: '\E800';
+  color: #305C9B; }
