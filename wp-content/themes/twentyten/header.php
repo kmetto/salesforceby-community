@@ -63,7 +63,7 @@
 		<div id="masthead">
 			<nav id="branding" class="nav" role="banner">
 				<div class="nav__logo">
-					<img src="<?=get_template_directory_uri().DIRECTORY_SEPARATOR.'dist'.DIRECTORY_SEPARATOR.'static'.DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'salesforceby_logo.svg';?>" alt="" class="nav__logo-img img__logo">
+					<a href="/"><img src="<?=get_template_directory_uri().DIRECTORY_SEPARATOR.'dist'.DIRECTORY_SEPARATOR.'static'.DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'salesforceby_logo.svg';?>" alt="" class="nav__logo-img img__logo"></a>
 				</div>
                 <div class="nav__menu" id="nav__menu">
                     <a class="menu__link" href="/">Публикации</a>
