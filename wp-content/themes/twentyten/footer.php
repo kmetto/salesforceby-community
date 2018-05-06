@@ -12,7 +12,7 @@
 ?>
 	</div><!-- #main -->
 
-	<div id="footer" role="contentinfo">
+	<div id="footer" role="contentinfo" class="wrapper">
 		<div id="colophon">
 
 <?php

@@ -1,6 +1,7 @@
 import path from 'path';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 module.exports =  {
     entry: {
         'main.js': path.resolve(__dirname, 'src/frontend/js/search-hidden.js'),
@@ -31,7 +32,7 @@ module.exports =  {
                 }),
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -54,5 +55,9 @@ module.exports =  {
     plugins: [
         new CleanWebpackPlugin('dist'),
         new ExtractTextPlugin('styles.css'),
+        new CopyWebpackPlugin([{
+            from: 'src/frontend/static',
+            to: 'static',
+        }]),
     ],
 };

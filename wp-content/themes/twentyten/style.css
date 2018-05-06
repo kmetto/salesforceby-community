@@ -72,9 +72,6 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 	margin: 0 -240px 0 0;
 	width: 97%;
 }
-#content {
-	margin: 0 280px 0 20px;
-}
 #primary,
 #secondary {
 	float: right;
@@ -121,11 +118,9 @@ div.menu,
 #main,
 #wrapper {
 	margin: 0 auto;
-	max-width: 70rem;
 }
 #wrapper {
 	background: #fff;
-	padding: 0 20px;
 }
 
 /* Structure the footer area */
@@ -406,7 +401,6 @@ div.menu li {
 #main {
 	clear: both;
 	overflow: hidden;
-	padding: 40px 0 0 0;
 }
 #content {
 	margin-bottom: 36px;
@@ -1341,12 +1335,6 @@ code {
 	.page-link,
 	.widget-area {
 		display: none !important;
-	}
-	#container,
-	#header,
-	#footer {
-		margin: 0;
-		width: 100%;
 	}
 	#content,
 	.one-column #content {

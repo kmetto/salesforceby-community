@@ -18,7 +18,6 @@
  * @since Twenty Ten 1.0
  */
 ?>
-
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-above" class="navigation">
@@ -33,7 +32,6 @@
 		<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
 		<div class="entry-content">
 			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
-			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->
 	</div><!-- #post-0 -->
 <?php endif; ?>
@@ -113,7 +111,7 @@
 			</div><!-- .entry-summary -->
 		<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
+				<?php the_content( __( 'Continue reading <span class="met#contenta-nav">&rarr;</span>', 'twentyten' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
@@ -128,36 +126,24 @@
 <?php /* How to display all other posts. */ ?>
 
 	<?php else : ?>
-		<div class="entry-meta post__author">
-			<?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
-			<div class="post__author_name"><a class="link link_no-underline" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a></div>
-			<div class="post__author_name"><?=get_the_date()?></div>
-		</div><!-- .entry-meta -->
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a class="link" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-            <?php if(has_post_thumbnail()):?>
-			    <img class="post__thumb" src="<?=get_the_post_thumbnail_url(null, 'full')?> ";" alt="<?=the_title();?>">
-            <?php endif;?>
-	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
-			<div class="entry-summary">
+			<h2 class="post__title"><a class="post__link" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<div class="entry-meta post__author">
+			<?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
+			<div><a class="link link_no-underline post__author_name link_author" href="/user/<?= get_the_author_meta('user_login');?>"><?= get_the_author_meta('user_login');?></a>, <span class="post__author_date"><?=get_the_date()?></span></div>
+		</div>
+		<div class="post__preview">
+			<?php if(has_post_thumbnail()):?>
+				<div class="post__thumb-container">
+					<div class="post__thumb-img" style="background-image: url(<?=get_the_post_thumbnail_url(null, 'full')?>);"></div>					
+				</div>
+			<?php endif;?>
+			<div class="post__excerpt">
 				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
-	<?php else : ?>
-			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
-			</div><!-- .entry-content -->
-	<?php endif; ?>
-
-			<div class="entry-utility">
-				<?php if ( count( get_the_category() ) ) : ?>
-					<span class="cat-links">
-						<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-					</span>
-				<?php endif; ?>
-				<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</div><!-- .entry-utility -->
-		</div><!-- #post-## -->
+				<div class="post__readmore"><a class="link link_readmore link_no-underline" href="<?php the_permalink(); ?>">Читать далее</a></div>
+			</div>
+		</div>		
+		</div>
 
 		<?php comments_template( '', true ); ?>
 

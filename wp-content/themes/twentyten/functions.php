@@ -257,21 +257,6 @@ function twentyten_page_menu_args( $args ) {
 }
 add_filter( 'wp_page_menu_args', 'twentyten_page_menu_args' );
 
-/**
- * Set the post excerpt length to 40 characters.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- *
- * @since Twenty Ten 1.0
- *
- * @param int $length The number of excerpt characters.
- * @return int The filtered number of excerpt characters.
- */
-function twentyten_excerpt_length( $length ) {
-	return 40;
-}
-add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
 
 if ( ! function_exists( 'twentyten_continue_reading_link' ) ) :
 /**
@@ -286,45 +271,6 @@ function twentyten_continue_reading_link() {
 }
 endif;
 
-/**
- * Replace "[...]" with an ellipsis and twentyten_continue_reading_link().
- *
- * "[...]" is appended to automatically generated excerpts.
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- *
- * @since Twenty Ten 1.0
- *
- * @param string $more The Read More text.
- * @return string An ellipsis.
- */
-function twentyten_auto_excerpt_more( $more ) {
-	if ( ! is_admin() ) {
-		return ' &hellip;' . twentyten_continue_reading_link();
-	}
-	return $more;
-}
-add_filter( 'excerpt_more', 'twentyten_auto_excerpt_more' );
-
-/**
- * Add a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- *
- * @since Twenty Ten 1.0
- *
- * @param string $output The "Coninue Reading" link.
- * @return string Excerpt with a pretty "Continue Reading" link.
- */
-function twentyten_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() && ! is_admin() ) {
-		$output .= twentyten_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'twentyten_custom_excerpt_more' );
 
 /**
  * Remove inline styles printed when the gallery shortcode is used.
@@ -637,3 +583,20 @@ function twentyten_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentyten_widget_tag_cloud_args' );
+
+
+function resolveStatic($path) {
+	$templateUri = get_template_directory_uri();
+	$ds = DIRECTORY_SEPARATOR;
+	return $templateUri.$ds.join($ds, $path);
+}
+
+// function pluralise($amount, $items){
+// 	$case = [2,0,1,1,1,2];
+// 	return $items[($amount%100>= 5 && $amount <=19)? 2 : $case[min($amount%10,5)]];
+// }
+
+function new_excerpt_length($length) {
+	return 100;
+}
+add_filter('excerpt_length', 'new_excerpt_length');

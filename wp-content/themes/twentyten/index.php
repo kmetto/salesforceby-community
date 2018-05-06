@@ -15,8 +15,8 @@
 
 get_header(); ?>
 
-    <div id="container">
-        <div id="content" role="main">
+    <div class="main">
+        <div class="main__posts" role="main">
 
         <?php
         /*
@@ -27,7 +27,8 @@ get_header(); ?>
         get_template_part( 'loop', 'index' );
         ?>
         </div><!-- #content -->
+        <div class="main__sidebar">
+            <?php get_sidebar(); ?>
+        </div>
     </div><!-- #container -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

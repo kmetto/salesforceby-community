@@ -56,48 +56,12 @@
 
 <body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
-	<div id="header">
+	<div id="header" class="wrapper">
 		<div id="masthead">
 			<nav id="branding" class="nav" role="banner">
-				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-				<<?php echo $heading_tag; ?> id="site-title">
-					<span>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</span>
-				</<?php echo $heading_tag; ?>>
-	            <?php
-					// Compatibility with versions of WordPress prior to 3.4.
-					if ( function_exists( 'get_custom_header' ) ) {
-						/*
-						 * We need to figure out what the minimum width should be for our featured image.
-						 * This result would be the suggested width if the theme were to implement flexible widths.
-						 */
-						$header_image_width = get_theme_support( 'custom-header', 'width' );
-					} else {
-						$header_image_width = HEADER_IMAGE_WIDTH;
-					}
-
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() && current_theme_supports( 'post-thumbnails' ) &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
-							$image[1] >= $header_image_width ) :
-						// Houston, we have a new header image!
-					elseif ( get_header_image() ) :
-						// Compatibility with versions of WordPress prior to 3.4.
-						if ( function_exists( 'get_custom_header' ) ) {
-							$header_image_width  = get_custom_header()->width;
-							$header_image_height = get_custom_header()->height;
-						} else {
-							$header_image_width  = HEADER_IMAGE_WIDTH;
-							$header_image_height = HEADER_IMAGE_HEIGHT;
-						}
-					?>
-					<?php endif; ?>
-
-                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header menu widget") ) : ?>
-                <?php endif;?>
-
+				<div class="nav__logo">
+					<img src="<?=get_template_directory_uri().DIRECTORY_SEPARATOR.'dist'.DIRECTORY_SEPARATOR.'static'.DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'salesforceby_logo.svg';?>" alt="" class="nav__logo-img img__logo">
+				</div>
                 <div class="nav__menu" id="nav__menu">
                     <a class="menu__link" href="/">Публикации</a>
                     <a class="menu__link" href="/conferences">Конференции</a>
@@ -120,8 +84,8 @@
                         <a href="/logout" class="button">Выйти</a>
                         <a href="<?php echo um_user_profile_url(); ?>" class="user__avatar user__avatar_header"><?php echo get_avatar( um_user('ID'), 120 ); ?></a>
                     <?php else:?>
-                        <a href="/login" class="button">Войти</a>
-                        <a href="/register" class="button button_brand">Регистрация</a>
+                        <a href="/login" class="button button_brand">Войти</a>
+                        <a href="/register" class="button button_sf">Регистрация</a>
                     <?php endif;?>
                 </div>
 
@@ -129,5 +93,16 @@
 
 		</div><!-- #masthead -->
 	</div><!-- #header -->
-
-	<div id="main">
+	<header class="header">
+		<div class="wrapper">
+			<div class="header__container">
+				<div class="header__col header__col_left">
+					<img class="header__image" src="<?=resolveStatic(['dist', 'static', 'images', 'sf-coomunity.png']);?>" alt="">
+				</div>
+				<div class="header__col header__col_right">
+					<p class="header__title">Belarusian<br>Salesforce<br>Community</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper content">

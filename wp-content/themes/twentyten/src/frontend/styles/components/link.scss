@@ -4,6 +4,14 @@
     color: #3B97E1;
   }
 
+  &_readmore,
+  &_author {
+    color: #3B97E1;
+    &:hover{
+      color: #305C9B;
+    }
+  }
+
   &_no-underline {
     text-decoration: none;
   }
