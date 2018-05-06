@@ -21,3 +21,41 @@
     margin: 0!important;
   }
 }
+
+.widget_wpb_widget {
+  background-color: #245d88;
+  padding: 2rem 1rem;
+  .widget-title{
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+.expert-widget__button {
+  font-size: 1.25rem;
+  font-weight: 300;  
+}
+
+.expert-widget__name {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.expert-widget {
+  display: flex!important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.expert-widget__avatar {
+  width: 120px;
+}
+.expert-widget__avatar > img {
+  border-radius: 50%;
+  max-width: 100%;height: auto;
+}

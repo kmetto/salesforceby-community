@@ -42,7 +42,63 @@
 .um-col-alt .um-right.um-half a, .um-col-alt .um-right.um-half a:hover {
      background-color: transparent;
      border: 1px solid #305C9B !important;
-}.button, .um-button {
+}@font-face {
+  font-family: 'fontello';
+  src: url(fonts/2758abdac69d2a7dbcc83802dc9ba2c8.woff2) format('woff2'),
+       url(fonts/b0995683759473382420f6c1eddb9fd4.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?32493397#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-search:before { content: '\E800'; } /* '' */
+.icon-facebook-1:before { content: '\F300'; } /* '' */
+.icon-twitter-bird:before { content: '\F303'; } /* '' */
+.icon-instagram:before { content: '\F31E'; } /* '' */.button, .um-button {
   display: inline-flex;
   padding: 5px 20px;
   border: 1px solid #305C9B;
@@ -70,7 +126,7 @@
   .nav__hide {
     display: none; }
   .nav__menu {
-    margin: 0.5rem 31rem 0 0; }
+    margin: 0 31rem 0 0; }
     .nav__menu a:link, .nav__menu a:visited, .nav__menu a {
       margin-top: 5px;
       color: #838a92 !important;
@@ -174,6 +230,39 @@
 .widget-container ul {
   margin: 0 !important; }
 
+.widget_wpb_widget {
+  background-color: #245d88;
+  padding: 2rem 1rem; }
+  .widget_wpb_widget .widget-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 300; }
+
+.expert-widget__button {
+  font-size: 1.25rem;
+  font-weight: 300; }
+
+.expert-widget__name {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 1rem 0; }
+
+.expert-widget {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.expert-widget__avatar {
+  width: 120px; }
+
+.expert-widget__avatar > img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto; }
+
 .user__avatar img {
   border-radius: 1rem; }
 
@@ -222,7 +311,7 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url(fonts/6a36d105528570039209413742b6f710.woff2) format("woff2");
+  src: url(fonts/2758abdac69d2a7dbcc83802dc9ba2c8.woff2) format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -310,6 +399,28 @@
 
 .content {
   display: flex; }
+
+.footer {
+  color: #fff;
+  background-color: #15466c;
+  padding: 0.625rem 0; }
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__social {
+    display: flex;
+    flex-direction: row; }
+
+.icon_social {
+  color: #fff;
+  font-size: 1.5rem;
+  display: block;
+  padding: 0 .3rem;
+  transition: all .2s ease-in-out; }
+  .icon_social:hover {
+    color: #3798d4; }
 
 html {
   box-sizing: border-box; }

@@ -600,3 +600,52 @@ function new_excerpt_length($length) {
 	return 100;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+
+// Register and load the widget
+function wpb_load_widget() {
+	register_widget( 'wpb_widget' );
+}
+add_action( 'widgets_init', 'wpb_load_widget' );
+
+// Creating the widget 
+class wpb_widget extends WP_Widget {
+
+	function __construct() {
+		parent::__construct('wpb_widget', __('Наш эксперт', 'our_expert'), array( 'description' => __( 'Виджет для отображения экспертов', 'wpb_widget_domain' ), ));
+	}
+
+	public function widget( $args, $instance ) {
+		$authors = get_users(['role' => 'author']);
+		$title = apply_filters( 'widget_title', $instance['title'] );
+		echo $args['before_widget'];
+		if ( ! empty( $title ) )
+		echo $args['before_title'] . $title . $args['after_title'];
+		if(count($authors > 0)) {
+			echo '<div class="expert">';
+			foreach($authors as $author){
+				echo '<div class="expert-widget">';
+				echo '<div class="expert-widget__avatar">';
+				echo get_avatar( $author->ID, $size = '200', null, null, ['class' => ['expert__avatar']]);
+				echo '</div>';
+				echo '<div class="expert-widget__name">';
+				echo $author->first_name.' ';
+				echo $author->last_name;
+				echo '</div>';
+				echo '<div class="expert-widget__ask">';
+				echo '<button class="button button_sf expert-widget__button">Задать вопрос</button>';
+				echo '</div>';
+				echo '</div>';
+			}
+			echo '</div>';
+		}
+		echo '<script>jQuery(".expert").slick({slidesToShow: 1,slidesToScroll: 1,autoplay: true,autoplaySpeed: 5000, arrows: false});</script>';		
+		echo $args['after_widget'];
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		return $instance;
+	}
+}

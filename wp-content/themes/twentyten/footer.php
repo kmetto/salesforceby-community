@@ -12,33 +12,15 @@
 ?>
 	</div><!-- #main -->
 
-	<div id="footer" role="contentinfo" class="wrapper">
-		<div id="colophon">
-
-<?php
-	/*
-	 * A sidebar in the footer? Yep. You can customize
-	 * your footer with four columns of widgets.
-	 */
-	get_sidebar( 'footer' );
-?>
-
-			<div id="site-info">
-                <p>© 1998-2018 Salesforce.by. Все права защищены.</p>
-			</div><!-- #site-info -->
-
-			<div id="site-generator">
-				<?php
-				/**
-				 * Fires before the Twenty Ten credits in the footer.
-				 *
-				 * @since Twenty Ten 1.0
-				 */
-				do_action( 'twentyten_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyten' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyten' ); ?>"></a>
-			</div><!-- #site-generator -->
-
-		</div><!-- #colophon -->
+	<div role="contentinfo" class="footer">
+			<div class="wrapper footer__container">
+				<div class="footer__copy">© 1998-2018 Salesforce.by. Все права защищены.</div>
+				<div class="footer__social">
+					<a href="/"><div class="icon_social icon-facebook-1"></div></a>
+					<a href="/"><div class="icon_social icon-twitter-bird"></div></a>
+					<a href="/"><div class="icon_social icon-instagram"></div></a>
+				</div>			
+			</div>
 	</div><!-- #footer -->
 
 </div><!-- #wrapper -->
