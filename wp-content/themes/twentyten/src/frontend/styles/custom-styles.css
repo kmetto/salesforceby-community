@@ -39,9 +39,12 @@
     background-color: #305C9B;
     color: #fff !important;
     border: 0 !important;
+    min-width: 163px;
+    margin-right: 87px;
 }
 
 .um-col-alt .um-right.um-half a, .um-col-alt .um-right.um-half a:hover {
-     background-color: transparent;
-     border: 1px solid #305C9B !important;
+    background-color: transparent;
+    box-shadow: none!important;
+    border: 1px solid #305C9B !important;
 }
