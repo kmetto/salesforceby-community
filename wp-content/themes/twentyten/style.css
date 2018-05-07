@@ -404,6 +404,7 @@ div.menu li {
 }
 #content {
 	margin-bottom: 36px;
+	width: 75%;
 }
 #content,
 #content input,
@@ -472,8 +473,7 @@ div.menu li {
 	background: #f2f7fc;
 }
 .hentry {
-	margin: 0 0 48px 0;
-	width: 73%;
+	margin: 0 0 36px 0;
 }
 .home .sticky {
 	background: #f2f7fc;
