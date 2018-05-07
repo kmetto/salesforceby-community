@@ -1,7 +1,7 @@
-.comment-form {
+.comment-form{
   .comment-form-comment textarea {
     border: 0 !important;
-    border-bottom: 2px solid #C4C4C4 !important;
+    border-bottom: 2px solid #4444 !important;
     background-color: transparent;
     height: 3.4em;
     box-shadow: none;
@@ -39,3 +39,26 @@
     }
   }
 }
+
+#respond input[type=text] {
+  margin: 0 0 13px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #4444;
+  background-color: transparent;
+  outline: none;
+}
+
+#respond textarea {
+  border: none;
+  border-bottom: 2px solid #4444;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  height: 3.4rem;
+  margin: 0;
+  width: 100%;
+  resize: vertical;
+}
+

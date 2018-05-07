@@ -317,6 +317,26 @@
 .commentlist .reply a:hover {
   color: #305C9B; }
 
+#respond input[type=text] {
+  margin: 0 0 13px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #4444;
+  background-color: transparent;
+  outline: none; }
+
+#respond textarea {
+  border: none;
+  border-bottom: 2px solid #4444;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  height: 3.4rem;
+  margin: 0;
+  width: 100%;
+  resize: vertical; }
+
 @font-face {
   font-family: 'fontello';
   src: url(fonts/2758abdac69d2a7dbcc83802dc9ba2c8.woff2) format("woff2");
