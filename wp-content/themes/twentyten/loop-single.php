@@ -17,10 +17,6 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<div id="nav-above" class="navigation">
-					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?></div>
-					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
-				</div><!-- #nav-above -->
 				<div class="entry-meta post__author">
                     <div class="user__avatar">
                         <?= get_avatar( get_the_author_meta('user_email'), $size = '25'); ?>
