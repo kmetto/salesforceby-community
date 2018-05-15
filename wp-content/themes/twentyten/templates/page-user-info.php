@@ -18,7 +18,10 @@ get_header(); ?>
      * If you want to overload this in a child theme then include a file
      * called loop-index.php and that will be used instead.
      */
-    get_template_part( 'loop', 'single' );
+    // get_template_part( 'loop', 'single' );
+    if ( have_posts() ) while ( have_posts() ) : the_post();
+    the_content();
+    endwhile;
     ?>
     </div><!-- #content -->
     <div class="main__sidebar">
