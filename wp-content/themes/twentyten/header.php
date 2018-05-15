@@ -102,7 +102,7 @@
 					<img class="header__image" src="<?=resolveStatic(['dist', 'static', 'images', 'sf-coomunity.png']);?>" alt="">
 				</div>
 				<div class="header__col header__col_right">
-					<p class="header__title">Belarusian<br>Salesforce<br>Community</p>
+					<p class="header__title">Белорусское<br>Сообщество<br>Salesforce Разработчиков</p>
 				</div>
 			</div>
 		</div>
