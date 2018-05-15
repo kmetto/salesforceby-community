@@ -404,6 +404,7 @@ div.menu li {
 }
 #content {
 	margin-bottom: 36px;
+	width: 75%;
 }
 #content,
 #content input,
@@ -472,7 +473,7 @@ div.menu li {
 	background: #f2f7fc;
 }
 .hentry {
-	margin: 0 0 48px 0;
+	margin: 0 0 36px 0;
 }
 .home .sticky {
 	background: #f2f7fc;
@@ -1085,12 +1086,11 @@ h3#reply-title {
 	hyphens: auto;
 	margin: 0 0 18px 0;
     background-color: #f7f7f7;
-    padding: 1.2rem;
+	padding: 1.2rem 1.7rem;
 }
 
 .widget-container > ul > li {
-    border-bottom: 1px solid #e2e8e9;
-    padding: 0.7rem 0;
+    padding: 0.3rem 0;
     list-style-type: none;
     font-weight: 500;
     font-size: 14px;
@@ -1103,9 +1103,9 @@ h3#reply-title {
 .widget-container a {
     text-decoration: none;
     outline: none;
-    font-weight: 500;
+    font-weight: 500 !important;
     font-size: 14px;
-    color: #305C9B;
+    color: #52a2d2;
 }
 
 
@@ -1115,7 +1115,7 @@ h3#reply-title {
 .widget-title {
 	color: #505c66;
 	font-weight: bold;
-    padding-bottom: 1.3rem;
+    padding-bottom: 0.7rem;
 }
 .widget-area a:link,
 .widget-area a:visited {

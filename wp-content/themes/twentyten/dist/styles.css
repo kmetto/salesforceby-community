@@ -37,11 +37,14 @@
     background-color: #305C9B;
     color: #fff !important;
     border: 0 !important;
+    min-width: 163px;
+    margin-right: 87px;
 }
 
 .um-col-alt .um-right.um-half a, .um-col-alt .um-right.um-half a:hover {
-     background-color: transparent;
-     border: 1px solid #305C9B !important;
+    background-color: transparent;
+    box-shadow: none!important;
+    border: 1px solid #305C9B !important;
 }@font-face {
   font-family: 'fontello';
   src: url(fonts/2758abdac69d2a7dbcc83802dc9ba2c8.woff2) format('woff2'),
@@ -163,10 +166,14 @@
   margin-bottom: 10px; }
   .post__author img {
     border-radius: 1rem; }
-  .post__author_name, .post__author_date {
+  .post__author_name {
+    color: #a09e9f !important;
+    font-size: 15px; }
+  .post__author_date {
     font-size: 0.875rem; }
   .post__author_date {
-    color: #231f20; }
+    color: #231f20;
+    font-weight: 400 !important; }
   .post__author_name {
     margin-left: 10px; }
 
@@ -176,12 +183,13 @@
 
 .post__title {
   font-size: 1.5rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.75rem;
   line-height: 1.2; }
 
 .post__link {
   text-decoration: none;
-  color: #235e88; }
+  color: #235e88;
+  font-weight: bold; }
   .post__link:hover {
     color: #3798d4; }
 
@@ -309,6 +317,26 @@
 .commentlist .reply a:hover {
   color: #305C9B; }
 
+#respond input[type=text] {
+  margin: 0 0 13px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #4444;
+  background-color: transparent;
+  outline: none; }
+
+#respond textarea {
+  border: none;
+  border-bottom: 2px solid #4444;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  height: 3.4rem;
+  margin: 0;
+  width: 100%;
+  resize: vertical; }
+
 @font-face {
   font-family: 'fontello';
   src: url(fonts/2758abdac69d2a7dbcc83802dc9ba2c8.woff2) format("woff2");
@@ -326,7 +354,7 @@
     box-shadow: none;
     background-color: transparent;
     outline: none;
-    width: 44.9rem; }
+    width: 45rem; }
 
 .searchform__active {
   display: block; }
@@ -345,7 +373,7 @@
     display: inline-block;
     text-decoration: inherit;
     width: 1em;
-    margin-right: .2em;
+    margin-right: .6em;
     text-align: center;
     font-variant: normal;
     text-transform: none;

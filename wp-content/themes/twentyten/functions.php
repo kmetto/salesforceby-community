@@ -621,7 +621,7 @@ class wpb_widget extends WP_Widget {
 		echo $args['before_widget'];
 		if ( ! empty( $title ) )
 		echo $args['before_title'] . $title . $args['after_title'];
-		if(count($authors > 0)) {
+		if(count($authors ) > 0) {
 			echo '<div class="expert">';
 			foreach($authors as $author){
 				echo '<div class="expert-widget">';

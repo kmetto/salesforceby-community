@@ -78,11 +78,10 @@
                     </div>
                 </form>
 
-                <div class="search-button-hidden" id="search-button-hidden">
-                    <i class="icon-search"></i>
-                </div>
-
                 <div class="nav__user-actions">
+                    <div class="search-button-hidden" id="search-button-hidden">
+                        <i class="icon-search"></i>
+                    </div>
                     <?php if(is_user_logged_in()):?>
                         <a href="/logout" class="button">Выйти</a>
                         <a href="<?php echo um_user_profile_url(); ?>" class="user__avatar user__avatar_header"><?php echo get_avatar( um_user('ID'), 120 ); ?></a>
