@@ -421,8 +421,10 @@
 
 .main {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 100%; }
   .main__posts {
+    flex-grow: 1;
     padding-right: 3.5rem; }
 
 .content {
